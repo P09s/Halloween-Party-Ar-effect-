@@ -1,0 +1,12 @@
+{
+  "modelName": "animation_playback_controller_model",
+  "name": "animationPlaybackController1",
+  "identifier": "animation_playback_controller_model:1533909-545003c2-16bb-4a55-9371-0aab560b9e08",
+  "animationIdentifier": "animations/Take 001.animation",
+  "autoPlay": true,
+  "clipEnd": 3.333333251953125,
+  "clipProgress": 0,
+  "clipStart": 0,
+  "loop": true,
+  "speed": 1
+}
