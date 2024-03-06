@@ -1,0 +1,37 @@
+#import <gradients>
+#import <sdf>
+
+function<float(vec2)> sdfRoundRectangle(
+  vec2 pivot, vec2 halfSize, float radius
+){
+  vec2 halfSizeMinusRadius = halfSize - radius;
+  auto rectangleSDF = std::sdfRectangle(pivot, halfSizeMinusRadius);
+  auto roundSDF = std::sdfRound(rectangleSDF, radius);
+  return roundSDF;
+}
+
+// @param[default=#FFFFFFFF] color
+// @param[default=5.0,min=4.0,max=9.0] armCount
+// @return color
+vec4 main(
+  vec4 color, float armCount, float progress, float opacity, float cornerRadius, 
+  float edgeGap, float thickness, float aspectRatio, float squareOnScreen
+){
+  vec2 uv = fragment(std::getVertexTexCoord());
+  float aspectRatioWithProgress = mix(1.0, aspectRatio, 
+    (squareOnScreen>0.0)?progress:1.0);
+  vec2 maxHalfSize = aspectRatioWithProgress > 1.0 ? 
+    vec2(0.5, 0.5/aspectRatioWithProgress) : vec2(0.5*aspectRatioWithProgress, 0.5);
+  auto roundRectanbleSDF = sdfRoundRectangle(vec2(0.5), maxHalfSize-thickness, cornerRadius);
+  auto borderSDF = std::sdfAnnular(roundRectanbleSDF, thickness);
+  vec2 verticalCutterGap = vec2(maxHalfSize.x-edgeGap, 1.0);
+  auto verticalCutterSDF = std::sdfRectangle(vec2(0.5), verticalCutterGap);
+  vec2 horizontalCutterGap = vec2(1.0, maxHalfSize.y-edgeGap);
+  auto horizontalSDF = std::sdfRectangle(vec2(0.5), horizontalCutterGap);
+  auto cutterSDF = std::sdfUnion(verticalCutterSDF, horizontalSDF);
+  auto cornerSDF = std::sdfSmoothDifference(borderSDF, cutterSDF, thickness);
+  float dist = cornerSDF(uv);
+  float edge = fwidth(dist);
+  float alpha = smoothstep(-edge, +edge, dist);
+  return mix(color, color.rgb0, alpha) * opacity;
+}

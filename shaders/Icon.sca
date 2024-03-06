@@ -1,0 +1,78 @@
+#import <gradients>
+#import <sdf>
+
+vec2 scaleUV(vec2 uv, vec2 pivot, vec2 scale, float aspectRatio){
+  vec2 aspectRatioAdjustment = aspectRatio > 1.0 ? 
+    vec2(1.0, 1.0/aspectRatio) : vec2(1.0*aspectRatio, 1.0);
+  vec2 uvFromPivot = uv - pivot;
+  uvFromPivot /= scale * aspectRatioAdjustment;
+  return uvFromPivot + pivot;
+}
+
+function<float(vec2)> sdfRoundRectangle(
+  vec2 pivot, vec2 halfSize, float radius
+){
+  vec2 halfSizeMinusRadius = halfSize - radius;
+  auto rectangleSDF = std::sdfRectangle(pivot, halfSizeMinusRadius);
+  auto roundSDF = std::sdfRound(rectangleSDF, radius);
+  return roundSDF;
+}
+
+function<float(vec2)> sdfIconShape(
+  float minimizedRadius, float maximizedRadius, float progress, float aspectRatio
+){
+  float cornerRadius = mix(minimizedRadius, maximizedRadius, progress);
+  vec2 maxHalfSize = aspectRatio > 1.0 ? 
+    vec2(0.5, 0.5/aspectRatio) : vec2(0.5*aspectRatio, 0.5);
+  vec2 halfSize = mix(vec2(cornerRadius), maxHalfSize, progress);
+  return sdfRoundRectangle(vec2(0.5), halfSize, cornerRadius);
+}
+
+function<float(vec2)> sdfRing(float radius, float width){
+  vec2 center = vec2(0.5, 0.5);
+  auto circleSDF = std::sdfCircle(center, radius);
+  auto ringSDF = std::sdfAnnular(circleSDF, width);
+  return ringSDF;
+}
+
+vec4 getTextureColor(
+  std::Texture2d texture, vec2 uv, float progress, float halfMinScale, float aspectRatio
+){
+  float minScale = halfMinScale * 2.0;
+  float minTextureScale = aspectRatio > 1.0 ? 
+    minScale * aspectRatio : minScale / aspectRatio;
+  float textureScale = mix(minTextureScale, 1.0, progress);
+  vec2 scaledUV = scaleUV(uv, vec2(0.5), vec2(textureScale), aspectRatio);
+  vec4 color = texture.sample(scaledUV);
+  return texture.sample(scaledUV);
+}
+
+vec4 getColorFromSDF(function<float(vec2)> sdf, vec2 uv, vec4 color, float opacity){
+  float dist = sdf(uv);
+  float edge = fwidth(dist);
+  float alpha = smoothstep(-edge, +edge, dist);
+  return mix(color, vec4(0), alpha) * opacity;
+}
+
+// @param[default=0.2] minimizedRadius
+// @param[default=0.1] maximizedRadius
+// @param[default=1.0] aspectRatio
+// @param[default=1.0] opacity
+// @param[default=#FFFFFFFF] outlineColor
+// @param[default=0.001] outlineOffset
+// @param[default=0.001] outlineWidth
+// @return color
+vec4 main(
+  std::Texture2d texture, float progress, float minimizedRadius, 
+  float maximizedRadius, float aspectRatio, float opacity,
+  vec4 outlineColor, float outlineOffset, float outlineWidth
+){
+  vec2 uv = fragment(std::getVertexTexCoord());
+  vec4 textureColor = getTextureColor(texture, uv, progress, minimizedRadius, aspectRatio);
+  auto shapeSDF = sdfIconShape(minimizedRadius, maximizedRadius, progress, aspectRatio);
+  auto outlineSDF = std::sdfAnnular(
+    std::sdfRound(shapeSDF, outlineOffset+outlineWidth/2.0), outlineWidth/2.0);
+  vec4 icon = getColorFromSDF(shapeSDF, uv, textureColor, opacity);
+  vec4 outline = getColorFromSDF(outlineSDF, uv, outlineColor, opacity);
+  return icon + outline * mix(1.0, 0.0, progress * 2.0);
+}

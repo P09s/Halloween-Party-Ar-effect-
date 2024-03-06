@@ -1,0 +1,32 @@
+//==============================================================================
+// Welcome to shader authoring in Spark AR Studio!
+//==============================================================================
+
+#import <gradients>
+#import <sdf>
+
+function<float(vec2)> sdfRing(float radius, float width){
+  vec2 center = vec2(0.5, 0.5);
+  auto circleSDF = std::sdfCircle(center, radius);
+  auto ringSDF = std::sdfAnnular(circleSDF, width);
+  return ringSDF;
+}
+
+// @param[default=#FFFFFFFF] color
+// @param[default=0.5] radius
+// @param[default=1.0] aspectRatio
+// @return color
+vec4 main(vec4 color, float radius, float width, float angle) {
+  vec2 uv = fragment(std::getVertexTexCoord());
+  auto sdf = sdfRing(radius, width);
+  auto maskLeftSDF = std::sdfRotation(
+    std::sdfHalfPlane(vec2(0.5), vec2(-1,0)), vec2(0.5), angle);
+  auto maskRightSDF = std::sdfRotation(
+    std::sdfHalfPlane(vec2(0.5), vec2(1,0)), vec2(0.5), -angle);
+  auto maskSDF = std::sdfIntersection(maskLeftSDF, maskRightSDF);
+  auto arcSDF = std::sdfSmoothIntersection(sdf, maskSDF, width);
+  float dist = arcSDF(uv);
+  float edge = fwidth(dist);
+  float alpha = smoothstep(-edge, +edge, dist);
+  return mix(color, color.rgb0, alpha);
+}
