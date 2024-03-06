@@ -1,0 +1,127 @@
+{
+  "modelName": "shader_code_asset_material_model",
+  "name": "icon",
+  "identifier": "shader_code_asset_material_model:61891-782d5fe3-c1bf-4334-863e-3398418a02ec",
+  "alphaTestEnabled": false,
+  "alphaTestThreshold": 0,
+  "blendMode": "alpha",
+  "cullMode": "back",
+  "diffuseFactor": "0xffffffff",
+  "diffuseTextureTransform": {
+    "offsetU": 0,
+    "offsetV": 0,
+    "rotation": 0,
+    "scaleU": 1,
+    "scaleV": 1
+  },
+  "doubleSided": false,
+  "fragmentOutputCount": 1,
+  "importIssues": {},
+  "isDiffuseTextureIdentifierEnabled": false,
+  "readDepth": true,
+  "shader": "shader_interface_model:121260-38a43bb7-d20c-402a-9879-1c2c13ffb851",
+  "transparency": 1,
+  "writeDepth": false,
+  "writesToColorBufferAlpha": true,
+  "writesToColorBufferBlue": true,
+  "writesToColorBufferGreen": true,
+  "writesToColorBufferRed": true,
+  "children": [
+    {
+      "modelName": "composed_material_parameters_model",
+      "identifier": "composed_material_parameters_model:87281-5092eecd-dbcd-437b-b102-bffbf15afc4d",
+      "children": [
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "texture",
+          "identifier": "composed_material_parameter_model:63243-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "type": "texture"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "progress",
+          "identifier": "composed_material_parameter_model:63245-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            1
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "minimizedRadius",
+          "identifier": "composed_material_parameter_model:63247-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            0.1
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "maximizedRadius",
+          "identifier": "composed_material_parameter_model:63249-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            0.025
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "aspectRatio",
+          "identifier": "composed_material_parameter_model:63251-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            1
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "opacity",
+          "identifier": "composed_material_parameter_model:63253-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            1
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "outlineColor",
+          "identifier": "composed_material_parameter_model:63255-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "type": "color"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "outlineOffset",
+          "identifier": "composed_material_parameter_model:63257-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            0.015
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "outlineWidth",
+          "identifier": "composed_material_parameter_model:63259-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            0.015
+          ],
+          "type": "float"
+        }
+      ]
+    }
+  ]
+}

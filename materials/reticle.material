@@ -1,0 +1,136 @@
+{
+  "modelName": "shader_code_asset_material_model",
+  "name": "reticle",
+  "identifier": "shader_code_asset_material_model:60387-782d5fe3-c1bf-4334-863e-3398418a02ec",
+  "alphaTestEnabled": false,
+  "alphaTestThreshold": 0,
+  "blendMode": "alpha",
+  "cullMode": "back",
+  "diffuseFactor": "0xffffffff",
+  "diffuseTextureTransform": {
+    "offsetU": 0,
+    "offsetV": 0,
+    "rotation": 0,
+    "scaleU": 1,
+    "scaleV": 1
+  },
+  "doubleSided": false,
+  "fragmentOutputCount": 1,
+  "importIssues": {},
+  "isDiffuseTextureIdentifierEnabled": false,
+  "readDepth": true,
+  "shader": "shader_interface_model:121286-38a43bb7-d20c-402a-9879-1c2c13ffb851",
+  "transparency": 1,
+  "writeDepth": false,
+  "writesToColorBufferAlpha": true,
+  "writesToColorBufferBlue": true,
+  "writesToColorBufferGreen": true,
+  "writesToColorBufferRed": true,
+  "children": [
+    {
+      "modelName": "composed_material_parameters_model",
+      "identifier": "composed_material_parameters_model:87279-5092eecd-dbcd-437b-b102-bffbf15afc4d",
+      "children": [
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "color",
+          "identifier": "composed_material_parameter_model:61739-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "type": "color"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "armCount",
+          "identifier": "composed_material_parameter_model:61741-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "maxValue": [
+            9
+          ],
+          "minValue": [
+            4
+          ],
+          "rawValue": [
+            5
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "progress",
+          "identifier": "composed_material_parameter_model:61743-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            0
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "opacity",
+          "identifier": "composed_material_parameter_model:61745-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            0
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "cornerRadius",
+          "identifier": "composed_material_parameter_model:61747-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            0.05
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "edgeGap",
+          "identifier": "composed_material_parameter_model:61749-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            0.1
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "thickness",
+          "identifier": "composed_material_parameter_model:61751-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            0.005
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "aspectRatio",
+          "identifier": "composed_material_parameter_model:61753-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            0
+          ],
+          "type": "float"
+        },
+        {
+          "modelName": "composed_material_parameter_model",
+          "name": "squareOnScreen",
+          "identifier": "composed_material_parameter_model:61755-782d5fe3-c1bf-4334-863e-3398418a02ec",
+          "isTextureIdentifierEnabled": false,
+          "rawValue": [
+            0
+          ],
+          "type": "float"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "modelName": "dependent_metallic_roughness_p_b_r_material_model",
+  "name": "Mat.1",
+  "identifier": "dependent_metallic_roughness_p_b_r_material_model:14540474-545003c2-16bb-4a55-9371-0aab560b9e08",
+  "sourceIdentifier": "asset_collection_model:14540512-545003c2-16bb-4a55-9371-0aab560b9e08",
+  "alphaTestEnabled": false,
+  "alphaTestThreshold": 0,
+  "baseColorFactor": "0xffffffff",
+  "baseColorTextureName": "dependent_texture_model:14540476-545003c2-16bb-4a55-9371-0aab560b9e08",
+  "baseColorTextureTransform": {
+    "offsetU": 0,
+    "offsetV": 0,
+    "rotation": 0,
+    "scaleU": 1,
+    "scaleV": 1
+  },
+  "blendMode": "replace",
+  "colorEncoding": "srgb",
+  "cullMode": "back",
+  "diffuseEnvironmentTextureTransform": {
+    "rotationX": 0,
+    "rotationY": 0,
+    "rotationZ": 0
+  },
+  "diffuseTextureTransform": {
+    "offsetU": 0,
+    "offsetV": 0,
+    "rotation": 0,
+    "scaleU": 1,
+    "scaleV": 1
+  },
+  "doubleSided": true,
+  "emissiveEnabled": true,
+  "emissiveFactor": "0xffffffff",
+  "emissiveTextureName": "dependent_texture_model:14540484-545003c2-16bb-4a55-9371-0aab560b9e08",
+  "emissiveTextureTransform": {
+    "offsetU": 0,
+    "offsetV": 0,
+    "rotation": 0,
+    "scaleU": 1,
+    "scaleV": 1
+  },
+  "environmentEnabled": true,
+  "importIssues": {},
+  "isBaseColorTextureIdentifierEnabled": true,
+  "isDiffuseEnvironmentTextureIdentifierEnabled": false,
+  "isDiffuseTextureIdentifierEnabled": false,
+  "isEmissiveTextureIdentifierEnabled": true,
+  "isMetallicRoughnessTextureIdentifierEnabled": true,
+  "isNormalTextureIdentifierEnabled": true,
+  "isOcclusionTextureIdentifierEnabled": true,
+  "isSpecularEnvironmentTextureIdentifierEnabled": false,
+  "metallicFactor": 0,
+  "metallicRoughnessTextureName": "dependent_texture_model:14540478-545003c2-16bb-4a55-9371-0aab560b9e08",
+  "metallicRoughnessTextureTransform": {
+    "offsetU": 0,
+    "offsetV": 0,
+    "rotation": 0,
+    "scaleU": 1,
+    "scaleV": 1
+  },
+  "normalTextureName": "dependent_texture_model:14540482-545003c2-16bb-4a55-9371-0aab560b9e08",
+  "normalTextureScale": 1,
+  "normalTextureTransform": {
+    "offsetU": 0,
+    "offsetV": 0,
+    "rotation": 0,
+    "scaleU": 1,
+    "scaleV": 1
+  },
+  "occlusionStrength": 0.7283915281295776,
+  "occlusionTextureName": "dependent_texture_model:14540480-545003c2-16bb-4a55-9371-0aab560b9e08",
+  "occlusionTextureTransform": {
+    "offsetU": 0,
+    "offsetV": 0,
+    "rotation": 0,
+    "scaleU": 1,
+    "scaleV": 1
+  },
+  "readDepth": true,
+  "roughnessFactor": 0.6004845499992371,
+  "specularEnvironmentTextureTransform": {
+    "rotationX": 0,
+    "rotationY": 0,
+    "rotationZ": 0
+  },
+  "transparency": 1,
+  "vertexColorEnabled": true,
+  "writeDepth": true,
+  "writesToColorBufferAlpha": true,
+  "writesToColorBufferBlue": true,
+  "writesToColorBufferGreen": true,
+  "writesToColorBufferRed": true
+}
