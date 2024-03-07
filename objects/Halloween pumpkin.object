@@ -1,0 +1,189 @@
+{
+  "modelName": "master3_d_object_model",
+  "name": "Halloween pumpkin",
+  "identifier": "master3_d_object_model:14540508-545003c2-16bb-4a55-9371-0aab560b9e08",
+  "sourceIdentifier": "asset_collection_model:14540512-545003c2-16bb-4a55-9371-0aab560b9e08",
+  "animationMask": {
+    "position": false,
+    "rotation": false,
+    "scale": false
+  },
+  "cameraVisibility": "back|front",
+  "depth": 269.44696044921875,
+  "globalScaleFactor": 0.0074471601736019214,
+  "height": 191.44618225097656,
+  "hidden": false,
+  "layerIdentifier": "UI",
+  "outputVisibility": "preview|capture",
+  "physicsEnabled": false,
+  "tags": [],
+  "transform": {
+    "rx": -1.570796251296997,
+    "ry": 1.6081226229577292E-16,
+    "rz": -1.6081226229577292E-16,
+    "sx": 1,
+    "sy": 0.9999999403953552,
+    "sz": 0.9999999403953552,
+    "x": -4.38152118753532E-14,
+    "y": -5.684341886080802E-14,
+    "z": 5.684347307091664E-14
+  },
+  "width": 268.5587463378906,
+  "children": [
+    {
+      "modelName": "sceneObject",
+      "name": "8fa5a9c4e5ed408a84db98856280a0ec.fbx",
+      "identifier": "sceneObject:14540488-545003c2-16bb-4a55-9371-0aab560b9e08",
+      "animationMask": {
+        "position": false,
+        "rotation": false,
+        "scale": false
+      },
+      "cameraVisibility": "back|front",
+      "hidden": false,
+      "layerIdentifier": "UI",
+      "outputVisibility": "preview|capture",
+      "physicsEnabled": false,
+      "shapeColor": "0xff808080",
+      "shapeType": 0,
+      "tags": [],
+      "transform": {
+        "rx": 1.5707963705062866,
+        "ry": 0,
+        "rz": 0,
+        "sx": 1,
+        "sy": 1,
+        "sz": 1,
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "children": [
+        {
+          "modelName": "sceneObject",
+          "name": "RootNode",
+          "identifier": "sceneObject:14540490-545003c2-16bb-4a55-9371-0aab560b9e08",
+          "animationMask": {
+            "position": false,
+            "rotation": false,
+            "scale": false
+          },
+          "cameraVisibility": "back|front",
+          "hidden": false,
+          "layerIdentifier": "UI",
+          "outputVisibility": "preview|capture",
+          "physicsEnabled": false,
+          "shapeColor": "0xff808080",
+          "shapeType": 0,
+          "tags": [],
+          "transform": {
+            "rx": 0,
+            "ry": 0,
+            "rz": 0,
+            "sx": 1,
+            "sy": 1,
+            "sz": 1,
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "children": [
+            {
+              "modelName": "sceneObject",
+              "name": "Pumpkin",
+              "identifier": "sceneObject:14540492-545003c2-16bb-4a55-9371-0aab560b9e08",
+              "animationMask": {
+                "position": false,
+                "rotation": false,
+                "scale": false
+              },
+              "cameraVisibility": "back|front",
+              "hidden": false,
+              "layerIdentifier": "UI",
+              "outputVisibility": "preview|capture",
+              "physicsEnabled": false,
+              "shapeColor": "0xff808080",
+              "shapeType": 0,
+              "tags": [],
+              "transform": {
+                "rx": -8.23013845727247E-16,
+                "ry": 0,
+                "rz": 0,
+                "sx": 1,
+                "sy": 1,
+                "sz": 1,
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "children": [
+                {
+                  "modelName": "mesh",
+                  "name": "Pumpkin_Mat.1_0",
+                  "identifier": "mesh:14540494-545003c2-16bb-4a55-9371-0aab560b9e08",
+                  "animationMask": {
+                    "position": false,
+                    "rotation": false,
+                    "scale": false
+                  },
+                  "cameraVisibility": "back|front",
+                  "castShadow": false,
+                  "hidden": false,
+                  "layerIdentifier": "UI",
+                  "nodeName": "Pumpkin_Mat.1_0",
+                  "numberOfFaces": 27434,
+                  "outputVisibility": "preview|capture",
+                  "physicsEnabled": false,
+                  "prefabIdentifier": "gltf:14540500-545003c2-16bb-4a55-9371-0aab560b9e08",
+                  "receiveShadow": false,
+                  "renderPass": "main_scene",
+                  "tags": [],
+                  "transform": {
+                    "rx": 0,
+                    "ry": 0,
+                    "rz": 0,
+                    "sx": 1,
+                    "sy": 1,
+                    "sz": 1,
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "useEmbeddedBlendshapes": false,
+                  "children": [
+                    {
+                      "modelName": "surfaces",
+                      "identifier": "surfaces:14540496-545003c2-16bb-4a55-9371-0aab560b9e08",
+                      "children": [
+                        {
+                          "modelName": "surface",
+                          "name": "surface0",
+                          "identifier": "surface:14540503-545003c2-16bb-4a55-9371-0aab560b9e08",
+                          "isMaterialIdentifierEnabled": true,
+                          "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:14540474-545003c2-16bb-4a55-9371-0aab560b9e08",
+                          "surfaceGroupIdentifier": "14540504-545003c2-16bb-4a55-9371-0aab560b9e08"
+                        },
+                        {
+                          "modelName": "surface",
+                          "name": "surface1",
+                          "identifier": "surface:14540506-545003c2-16bb-4a55-9371-0aab560b9e08",
+                          "isMaterialIdentifierEnabled": true,
+                          "materialIdentifier": "dependent_metallic_roughness_p_b_r_material_model:14540474-545003c2-16bb-4a55-9371-0aab560b9e08",
+                          "surfaceGroupIdentifier": "14540504-545003c2-16bb-4a55-9371-0aab560b9e08"
+                        }
+                      ]
+                    },
+                    {
+                      "modelName": "blend_shapes_model",
+                      "identifier": "blend_shapes_model:14540498-545003c2-16bb-4a55-9371-0aab560b9e08"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
